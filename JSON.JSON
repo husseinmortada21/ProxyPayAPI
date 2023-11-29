@@ -1,0 +1,30 @@
+<div class="proxypagament111">
+    <h4>Detalhes de Pagamentos</h4>
+    <p>Para concluir sua compra, por favor utilize as seguintes informações de pagamento:</p>
+{if $order_info.payment_info.reference_id}
+    <div>{__("reference_id")}: {$order_info.payment_info.reference_id}<div>
+    {if $order_info.payment_info.entity_id}
+        <div>{__("entity_id")}: {$order_info.payment_info.entity_id}</div>
+    {/if}
+    {if $order_info.payment_info.validity}
+        <div>{__("validity")}: {$order_info.payment_info.validity}</div>
+    {/if}
+{/if}</div><br>
+<button class="butdispe"><a href="https://staging.itec.co.ao/index.php?dispatch=orders.details"><strong style="color:#fff;">Continuar para a página de pedidos</strong></a></button>
+<style>
+    .proxypagament111{
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        width: 50%;
+        height:180px;
+text-align:center;
+    }
+    .butdispe{
+        padding: 10px 10px 10px 10px;
+margin-bottom: 10px;
+background-color: #003078;
+color: #fff;
+border-radius: 5px;
+border: none;
+    }
+</style>
+
